@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+/* Заполняет массив индикаторов простых чисел от 0 до n включительно,
+   primes — массив размера не менее n + 1. */
+void calculate_primes(int primes[], int n);
+
+int main ()
+{
+        int n;
+        int i=0;
+         printf ("Введите число менее 10000000:");
+         scanf ("%ld", &n);
+        if (n<10000000);
+         else
+          do{
+           printf ("Вы ввели число более 10000000, введите число меньше:");
+           scanf ("%ld", &n);
+         }while (n>10000000);
+        n=n+1;
+        int primes[n];
+        calculate_primes(primes, n);
+        do{
+         if (primes[i]>0,i++){
+          printf (" %d",primes[i]);
+        }
+         else{
+          (i++);}
+          }while (i<n);
+        printf ("\n");
+        return 0;
+}
+
+void calculate_primes(int primes[], int n)
+
+{
+        primes[0]=0;
+        primes[1]=0;
+        int i=2;
+        int k=2;
+         do{
+          primes[i]=(i,i++);
+        }while (i<n);
+        i=2;
+        do{
+        if (primes [i]!=0,k<n+1){
+        (primes[k]%primes[i]!=0,k++);
+        }else {(primes[i]=0,i++);}
+        }while (i<n+1);
+}
